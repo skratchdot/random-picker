@@ -10,7 +10,7 @@
 var randomGenerator = require('random-seed');
 
 var cleanScore = function (score) {
-	var num = score === 0 ? 0 : parseFloat(score) || 1;
+	var num = parseFloat(score) || 1;
 	if (!Number.isFinite(num) || num < 0) {
 		num = 0;
 	}
@@ -23,10 +23,10 @@ var Option = function (value, score) {
 };
 
 var Picker = function (seed) {
-	var api = this,
-		rand = randomGenerator.create(seed),
-		total = 0,
-		options = [];
+	var api = this;
+	var rand = randomGenerator.create(seed);
+	var total = 0;
+	var options = [];
 
 	var recalculateTotal = function () {
 		total = 0;
@@ -36,8 +36,8 @@ var Picker = function (seed) {
 	};
 
 	api.pick = function () {
-		var runningTotal = 0,
-			randomValue = rand.floatBetween(0, total);
+		var runningTotal = 0;
+		var randomValue = rand.floatBetween(0, total);
 		for (var i = 0; i < options.length; i++) {
 			runningTotal += options[i].score;
 			if (randomValue < runningTotal) {
@@ -48,7 +48,8 @@ var Picker = function (seed) {
 	};
 
 	api.option = function (value, score) {
-		var option = new Option(value, score), added = false;
+		var option = new Option(value, score);
+		var added = false;
 		if (option.score <= 0) {
 			api.remove(value);
 		} else {

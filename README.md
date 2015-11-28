@@ -1,9 +1,13 @@
 # random-picker
 
+[![NPM version](https://badge.fury.io/js/random-picker.svg)](http://badge.fury.io/js/random-picker)
 [![Build Status](https://travis-ci.org/skratchdot/random-picker.png?branch=master)](https://travis-ci.org/skratchdot/random-picker)
-[![Coverage Status](https://coveralls.io/repos/skratchdot/random-picker/badge.png)](https://coveralls.io/r/skratchdot/random-picker)
+[![Code Climate](https://codeclimate.com/github/skratchdot/random-picker.png)](https://codeclimate.com/github/skratchdot/random-picker)
+[![Coverage Status](https://coveralls.io/repos/skratchdot/random-picker/badge.svg?branch=master&service=github)](https://coveralls.io/github/skratchdot/random-picker?branch=master)
 [![Dependency Status](https://david-dm.org/skratchdot/random-picker.svg)](https://david-dm.org/skratchdot/random-picker)
 [![devDependency Status](https://david-dm.org/skratchdot/random-picker/dev-status.svg)](https://david-dm.org/skratchdot/random-picker#info=devDependencies)
+
+[![NPM](https://nodei.co/npm/random-picker.png)](https://npmjs.org/package/random-picker)
 
 
 ## Description
@@ -29,6 +33,8 @@ picker.option('good', 3.42)
 picker.option('bad', 3.42)
 picker.pick(); // now there's a 50% chance of being 'good' or 'bad'
 ```
+
+- [Live example on Tonic](https://tonicdev.com/npm/random-picker)
 
 
 ## Documentation
