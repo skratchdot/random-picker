@@ -4,7 +4,12 @@
   "description": "Randomly pick an item from a set (using the specified probabilities).",
   "main": "lib/random-picker",
   "scripts": {
-    "test": "gulp test"
+    "build": "npm-run-all clean lint cover",
+    "clean": "rimraf ./coverage/*",
+    "cover": "jest test.js --coverage",
+    "lint": "eslint *.js",
+    "prepublish": "npm run build",
+    "test": "jest test.js"
   },
   "author": "skratchdot",
   "license": "MIT",
@@ -17,19 +22,19 @@
     "url": "git://github.com/skratchdot/random-picker.git"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4"
   },
   "dependencies": {
     "random-seed": "^0.3.0"
   },
   "devDependencies": {
-    "chai": "^3.4.1",
-    "coveralls": "^2.11.4",
-    "gulp": "^3.9.0",
-    "gulp-eslint": "^1.1.1",
-    "gulp-istanbul": "^0.10.3",
-    "gulp-mocha": "^2.2.0",
-    "isparta": "^4.0.0"
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.8.0",
+    "isparta": "^4.0.0",
+    "jest": "^21.2.1",
+    "npm-run-all": "^4.1.1",
+    "rimraf": "^2.6.2"
   },
   "tonicExampleFilename": ".tonic.example.js",
   "keywords": [
