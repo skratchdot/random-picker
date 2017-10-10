@@ -10,7 +10,8 @@
 var randomGenerator = require('random-seed');
 
 var cleanScore = function (score) {
-	var num = parseFloat(score) || 1;
+	var num = score === undefined ? 1 : parseFloat(score);
+	num = isNaN(num) ? 1 : num;
 	if (!Number.isFinite(num) || num < 0) {
 		num = 0;
 	}

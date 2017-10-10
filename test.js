@@ -79,4 +79,12 @@ describe('random-picker', function () {
 			expect(['male', 'female'].indexOf(picker.pick())).to.be.within(0, 1);
 		}
 	});
+	it('should work with zero as option value', function () {
+		picker.option('male', 0);
+		picker.option('female', 1);
+		expect(picker.totalScore()).to.be.equal(1);
+		for (i = 0; i < iterations; i++) {
+			expect(['male', 'female'].indexOf(picker.pick())).to.be.equal(1);
+		}
+	});
 });
