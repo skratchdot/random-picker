@@ -1,5 +1,6 @@
 .git*
 _ignore/
+coverage/
 .DS_Store
 .gitignore
 .npm-debug.log
